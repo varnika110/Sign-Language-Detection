@@ -4,7 +4,7 @@ import numpy as np
 def get_image_size():
 	img = cv2.imread('gestures/0/100.jpg', 0)
 	return img.shape
-
+  
 gestures = os.listdir('gestures/')
 gestures.sort(key = int)
 begin_index = 0

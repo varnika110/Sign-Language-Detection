@@ -16,6 +16,7 @@ K.set_image_dim_ordering('tf')
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
+
 def get_image_size():
 	img = cv2.imread('gestures/1/100.jpg', 0)
 	return img.shape
@@ -71,6 +72,7 @@ def train():
 	scores = model.evaluate(val_images, val_labels, verbose=0)
 	print("CNN Error: %.2f%%" % (100-scores[1]*100))
 	#model.save('cnn_model_keras2.h5')
+	
 
 train()
 K.clear_session();
